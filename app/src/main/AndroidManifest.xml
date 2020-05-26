@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.interappdemo"
+    android:sharedUserId="com.example">
+
+    <!-- REMOTING -->
+    <uses-permission android:name="ch.post.it.nemo.sheldon.remoting.core.BROADCAST_PERMISSION" />
+
+    <application
+        android:name=".InterappDemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- BEGIN: REMOTING -->
+        <activity-alias
+            android:name=".AppInfo"
+            android:targetActivity="ch.post.it.sheldon.extensions.android.Extension">
+            <intent-filter>
+                <action android:name="ch.post.it.sheldon.extensions.class.sheldon_app" />
+            </intent-filter>
+        </activity-alias>
+        <meta-data
+            android:name="portable_app_id"
+            android:value="external_interapp_demo" />
+        <!-- END: REMOTING -->
+
+    </application>
+
+</manifest>

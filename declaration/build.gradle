@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+   compileSdkVersion 29
+   buildToolsVersion "29.0.3"
+   compileOptions {
+      sourceCompatibility = 1.8
+      targetCompatibility = 1.8
+   }
+}
+
+repositories {
+   flatDir {
+      dirs 'libs'
+   }
+}
+
+dependencies {
+   // Remoting Framework
+   implementation (name: 'library-remoting-release', ext:'aar')
+}

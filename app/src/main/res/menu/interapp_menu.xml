@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fire_demo"
+        android:checked="true"
+        android:icon="@drawable/ic_interapp_fire"
+        android:title="Action Demo" />
+    <item
+        android:id="@+id/call_demo"
+        android:icon="@drawable/ic_interapp_call"
+        android:title="Call Demo" />
+    <item
+        android:id="@+id/broadcast_demo"
+        android:icon="@drawable/ic_interapp_broadcast"
+        android:title="Broadcast Demo" />
+    <item
+        android:id="@+id/receiving_demo"
+        android:icon="@drawable/ic_interapp_received"
+        android:title="Received Events" />
+</menu>
